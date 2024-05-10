@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <img id="img" src="./img/1.jpeg">
+  <img id="img" src="">
 
   <script language="javascript">
     ObjectWrite();
@@ -46,12 +46,14 @@
         }else{
           document.getElementById("img").src = "./img/6.jpeg";
         }
-      }else{
+      }else if(day == 19){
         if(hour <= 16){
           document.getElementById("img").src = "./img/7.jpeg";
         }else{
           document.getElementById("img").src = "./img/8.jpeg";
         }
+      }else{
+          document.getElementById("img").src = "./img/default.jpeg";
       }
     }
   </script>
