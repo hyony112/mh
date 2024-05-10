@@ -6,6 +6,38 @@
   <script language="javascript">
     ObjectWrite();
     StartGuard(2);
+
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth();
+    let day = today.getDate();
+    let hour = today.getHours();
+
+    if(today == 2024 && month == 4){
+      if(day == 11){
+        if(hour >= 17){
+          document.getElementById("img").src = "./img/2.jpeg";
+        }
+      }else if(day == 12){
+        if(hour <= 16){
+          document.getElementById("img").src = "./img/3.jpeg";
+        }else{
+          document.getElementById("img").src = "./img/4.jpeg";
+        }
+      }else if(day == 18){
+        if(hour < 17){
+          document.getElementById("img").src = "./img/5.jpeg";
+        }else{
+          document.getElementById("img").src = "./img/6.jpeg";
+        }
+      }else{
+        if(hour <= 16){
+          document.getElementById("img").src = "./img/7.jpeg";
+        }else{
+          document.getElementById("img").src = "./img/8.jpeg";
+        }
+      }
+    }
   </script>
   <title>집돌이와 밖순이의 우당탕탕 대모험</title>
   <style>
@@ -21,6 +53,6 @@
   </style>
 </head>
 <body>
-  <img src="./img/1.jpeg">
+  <img id="img" src="./img/1.jpeg">
 </body>
 </html>
